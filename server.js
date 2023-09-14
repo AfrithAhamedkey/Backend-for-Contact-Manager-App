@@ -3,6 +3,10 @@ const dotevn = require('dotenv').config()
 const PORT = process.env.PORT || 3000
 const router = require('./routes/contactRoutes')
 const errorHandler = require('./middlewares/errorHandlers')
+const connectDb = require('./config/dbConnetion')
+
+
+connectDb();
 const app = express()
 
 
